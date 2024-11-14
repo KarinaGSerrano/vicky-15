@@ -122,7 +122,7 @@ document.getElementById('sendBtn').addEventListener('click', function (event) {
   }
 
   // Número de teléfono de destino (en formato internacional, sin +)
-  const phoneNumber = '5491155555555'; // Cambia esto al número de WhatsApp al que deseas enviar el mensaje
+  const phoneNumber = '5491164944904';
 
   // Mensaje predefinido que incluye el nombre del usuario
   const message = `¡Hola vicky! soy ${name}. Te confirmo que voy a asistir a tu fiesta.`;
