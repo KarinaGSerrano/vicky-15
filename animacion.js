@@ -133,12 +133,8 @@ document.getElementById('sendBtn').addEventListener('click', function (event) {
   // Construir la URL de WhatsApp
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-  // Asignar la URL al atributo href del enlace
-  // document.getElementById('sendBtn').setAttribute('href', whatsappUrl);
-
   console.log(whatsappUrl);
 
-  // Open WhatsApp with the message
   window.open(whatsappUrl, '_blank');
 });
 
