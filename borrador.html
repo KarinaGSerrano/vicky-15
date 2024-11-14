@@ -1,0 +1,63 @@
+<!-- ----------------------------------------------- -->
+<!-- Background haces de luz -->
+<div id="foco1" class="fixed inset-0 pointer-events-none -z-10">
+  <!-- Foco 1 -->
+  <div
+    id="foco1-el"
+    class="foco absolute top-0 left-0 w-72 h-72 color-1 rounded-full filter blur-xl opacity-20"
+  ></div>
+  <!-- Foco 2 -->
+  <div
+    id="foco2-el"
+    class="foco absolute top-1/2 left-1/4 w-72 h-72 color-2 rounded-full filter blur-3xl opacity-30"
+  ></div>
+  <!-- Foco 3 -->
+  <div
+    id="foco3-el"
+    class="foco absolute top-1/4 right-0 w-72 h-72 color-3 rounded-full filter blur-3xl opacity-30"
+  ></div>
+  <!-- Foco 4 -->
+  <div
+    id="foco4-el"
+    class="foco absolute top-0 left-0 w-72 h-72 color-1 rounded-full filter blur-xl opacity-10"
+  ></div>
+  <!-- Foco 5 -->
+  <div
+    id="foco5-el"
+    class="foco absolute top-1/2 left-1/4 w-72 h-72 color-2 rounded-full filter blur-3xl opacity-30"
+  ></div>
+  <!-- Foco 6 -->
+  <div
+    id="foco6-el"
+    class="foco absolute top-1/4 right-0 w-72 h-72 color-3 rounded-full filter blur-3xl opacity-30"
+  ></div>
+  <!-- ----------------------------------------------- -->
+</div>
+<!-- ----------------------------------------------- -->
+
+<div class="fixed">
+  <nav class="p-4">
+    <div class="flex items-center justify-between items-center">
+      <!-- Logo a la izquierda -->
+      <div class="color-4 text-5xl"><span>15</span></div>
+
+      <!-- Botón a la derecha -->
+      <button
+        id="playBtn"
+        class="color-5 text-white w-14 h-14 rounded-full flex items-center justify-center hover:bg-blue-600 focus:outline-none"
+      >
+        <img
+          id="playIcon"
+          src="assets/img/icon-music-pause.svg"
+          alt="reproducir"
+          class="w-6 h-6 btn-1"
+        />
+      </button>
+
+      <!-- Audio -->
+      <audio id="myAudio">
+        <source src="assets/music.mp3" type="audio/mp3" />
+      </audio>
+    </div>
+  </nav>
+</div>

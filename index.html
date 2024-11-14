@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Invitacion</title>
+  </head>
+
+  <body class="bg-web fuente-3 color-1 overflow-x-hidden">
+    <!-- FONDO FIJO -->
+    <div class="fixed h-screen w-screen inset-0 -z-10">
+      <!-- Fondo con imágenes -->
+      <img
+        src="assets/img/flor-aqua-02.svg"
+        alt="Imagen Superior Izquierda"
+        class="absolute top-0 left-0 h-1/5 md:h-60 lg:h-80 object-contain"
+      />
+      <img
+        src="assets/img/flor-aqua-03.svg"
+        alt="Imagen Superior Derecha"
+        class="absolute top-0 right-0 h-100 md:h-60 lg:h-80 object-contain"
+      />
+      <img
+        src="assets/img/flor-aqua-04.svg"
+        alt="Imagen Inferior Izquierda"
+        class="absolute bottom-0 left-0 h-100 md:h-60 lg:h-80 object-contain"
+      />
+      <img
+        src="assets/img/flor-aqua-05.svg"
+        alt="Imagen Inferior Derecha"
+        class="absolute bottom-0 right-0 h-1/5 md:h-60 lg:h-80 object-contain"
+      />
+    </div>
+
+    <!-- NAV -->
+
+    <nav
+      class="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-8 z-30"
+    >
+      <button
+        class="flex justify-center items-center w-9 h-9 lg:w-12 lg:h-12 text-white rounded-full btn-nav"
+        onclick="scrollToSection('bloque1')"
+      >
+        <img
+          class="w-4 lg:w-5 opacity-90"
+          src="assets/img/icon-calendar-white.svg"
+          alt="15"
+        />
+      </button>
+      <button
+        class="flex justify-center items-center w-9 h-9 lg:w-12 lg:h-12 text-white rounded-full btn-nav"
+        onclick="scrollToSection('bloque2')"
+      >
+        <img
+          class="w-4 lg:w-5 opacity-90"
+          src="assets/img/icon-gps-white.svg"
+          alt="15"
+        />
+      </button>
+      <button
+        class="flex justify-center items-center w-9 h-9 lg:w-12 lg:h-12 text-white rounded-full btn-nav"
+        onclick="scrollToSection('bloque3')"
+      >
+        <img
+          class="w-4 lg:w-5 opacity-90"
+          src="assets/img/icon-gift-white.svg"
+          alt="15"
+        />
+      </button>
+      <button
+        class="flex justify-center items-center w-9 h-9 lg:w-12 lg:h-12 text-white rounded-full btn-nav animate__animated"
+        id="shakeButton"
+        onclick="scrollToSection('bloque4')"
+      >
+        <img
+          class="w-5 lg:w-6 opacity-90"
+          src="assets/img/icon-wsp-white.svg"
+          alt="15"
+        />
+      </button>
+    </nav>
+
+    <!-- CONTENIDO DESPLAZABLE -->
+    <div class="relative z-10 flex flex-col items-center space-y-20 mx-14">
+      <!-- ----------------------------------------------Primer bloque de contenido -->
+      <div
+        id="bloque1"
+        class="flex flex-col justify-center items-center mb-14 h-screen"
+      >
+        <!-- img corona -->
+        <div class="flex justify-center -mb-8 lg:-mb-14 opacity-70">
+          <img class="w-1/4" src="assets/img/queen-1.svg" alt="queen" />
+        </div>
+        <!--  -->
+        <h1 class="flex flex-row items-center fuente-1">
+          <span class="text-anim size-5">Mis</span>
+          <span class="size-8"> XV </span>
+
+          <!-- <img class="w-40 sombra-1" src="assets/img/15.svg" alt="15" /> -->
+          <span class="text-anim size-5">Años</span>
+        </h1>
+        <h2
+          class="text-anim fuente-3 size-3 font-normal text-center -mt-8 color-4"
+        >
+          VICKY
+        </h2>
+        <p class="escalera escalera-1 mt-3 text-center size-4 leading-normal">
+          Acompañame a celebrar este día tan especial.
+        </p>
+
+        <div class="escalera escalera-2 flex flex-row gap-2 items-center mt-8">
+          <div class="flex flex-col items-center">
+            <p class="font-bold color-3">Sábado</p>
+            <p class="fuente-1 size-3 leading-none -mt-3 color-3">20</p>
+            <p class="mt-2 font-bold">Diciembre</p>
+          </div>
+          <div class="h-20 border-l-4 borde-1 mx-5"></div>
+          <div class="flex flex-col items-center">
+            <p class="fuente-3 size-7 font-semibold">21:30</p>
+            <p class="font-bold">a</p>
+            <p class="fuente-3 size-7 font-semibold">5:30 hs</p>
+          </div>
+        </div>
+
+        <a
+          href="https://www.google.com/calendar/render?action=TEMPLATE&text=Nombre+del+Evento&details=Descripción+del+evento&location=Ubicación+del+evento&dates=20241114T090000Z/20241114T100000Z"
+          target="_blank"
+        >
+          <!-- <button
+            class="btn-agendar w-full py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300 flex flex-row justify-center gap-2"
+          >
+            Agendar evento
+          </button> -->
+        </a>
+
+        <p class="escalera escalera-2 mt-5 size-7 font-semibold text-center">
+          Dress code:
+          <span class="fuente-1 size-6 font-semibold pl-2 color-3">
+            Elegante</span
+          >
+        </p>
+
+        <a
+          href="#bloque2"
+          class="animate__animated animate__pulse animate__infinite mt-11 px-4 py-2 rounded transition-all hover:shadow-lg active:scale-100"
+          onclick="scrollAndAnimate(event, 'bloque2')"
+        >
+          <img
+            class="w-12 sombra-2"
+            src="assets/img/icon-chevrondown-blue.svg"
+            alt="chevron-down"
+          />
+        </a>
+      </div>
+
+      <!-- -------------------------------------------Segundo bloque de contenido -->
+      <div
+        id="bloque2"
+        class="flex flex-col justify-center items-center h-screen text-center"
+        style="animation-duration: 5s"
+      >
+        <div
+          class="flex justify-center items-center rounded-full borde-3 w-7 sm:w-10 h-7 sm:h-10 mb-2"
+        >
+          <img src="assets/img/icon-gps-green.svg" alt="" class="w-1/2" />
+        </div>
+
+        <h2
+          class="not-italic color-5 fuente-3 sombra-2 text-xl sm:text-2xl md:text-2xl lg:size-6"
+        >
+          ¿DÓNDE CELEBRO MI FIESTA?
+        </h2>
+
+        <!-- <span class="size-1">15</span> -->
+
+        <div class="flex flex-col md:flex-row md:justify-between mt-10">
+          <!-- Primer div (con contenido textual e imagen), alineado a la derecha en pantallas de escritorio -->
+          <div class="escalera escalera-1 md:order-2 md:w-1/2 md:text-right">
+            <div
+              class="flex flex-row justify-center md:justify-end items-center gap-2 mt-2 md:mt-10"
+            >
+              <img
+                src="/assets/img/logo-janos.svg"
+                alt="janos"
+                class="w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/5 block"
+              />
+              <!-- <p class="fuente-3 fuente-3 size-7 font-medium text-nowrap">
+                JANO'S
+              </p> -->
+              <p class="fuente-3 fuente-3 size-7 font-medium text-nowrap">
+                PUERTO MADERO,
+              </p>
+            </div>
+            <p class="fuente-3 size-7 font-normal">SALÓN DE EVENTOS.</p>
+            <p class="size-7 mt-4">
+              <span class="font-medium color-3"
+                >OLGA COSSETTINI <span class="font-bold">1031</span> ,
+                CABA</span
+              >
+            </p>
+          </div>
+
+          <!-- Segundo div (mapa), alineado a la izquierda en pantallas de escritorio -->
+          <div
+            class="w-full md:w-1/2 flex justify-center md:order-1 mt-8 md:mt-8"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13135.106066267172!2d-58.3637716!3d-34.6098123!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335a780bb0a43%3A0xa51dfe261863a064!2sJano&#39;s%20Puerto%20Madero!5e0!3m2!1ses-419!2sar!4v1731379152170!5m2!1ses-419!2sar"
+              class="w-11/12 md:w-full rounded-lg box p-2 h-[200px] md-h-400 lg-h-600"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="z-20 flex flex-col justify-center items-center mt-4">
+          <a
+            href="#bloque3"
+            class="animate__animated animate__pulse animate__infinite mt-11 px-4 py-2 rounded transition-all hover:shadow-lg active:scale-100"
+            onclick="scrollAndAnimate(event, 'bloque3')"
+          >
+            <img
+              class="w-12 sombra-2"
+              src="assets/img/icon-chevrondown-blue.svg"
+              alt="chevron-down"
+            />
+          </a>
+        </div>
+      </div>
+      <!-- -------------------------- -->
+
+      <!-- -----------------------------------------Tercer bloque de contenido -->
+      <div
+        id="bloque3"
+        class="flex flex-col justify-center items-center h-screen text-center"
+      >
+        <div
+          class="flex justify-center items-center rounded-full borde-3 w-7 sm:w-10 h-7 sm:h-10 mb-2"
+        >
+          <img src="assets/img/icon-gift-green.svg" alt="" class="w-1/2" />
+        </div>
+        <h2
+          class="not-italic color-5 fuente-3 sombra-2 text-xl sm:text-2xl md:text-2xl lg:size-6"
+        >
+          UNA SORPRESA ÚNICA
+        </h2>
+        <p class="escalera escalera-1 text-center size-10 mt-16">
+          Si queres hacerme un regalo, te comparto mi
+          <span class="font-semibold">alias</span> para transferencias:
+        </p>
+
+        <!-- ------------------- -->
+
+        <div class="flex justify-center justify-center space-x-2 mt-8 w-full">
+          <!-- Campo de alias/CVU no editable -->
+          <input
+            type="text"
+            id="aliasInput"
+            value="victoria.hrebacka"
+            class="w-1/2 lg:w-full p-2 borde-2 rounded-l-full text-gray-600 bg-transparent cursor-default"
+            readonly
+          />
+
+          <!-- Botón de copiar -->
+          <button
+            onclick="copiarAlPortapapeles()"
+            class="lg:w-1/4 flex flex-row justify-center gap-1 px-3 py-2 btn-2 shadow-xl text-white rounded-r-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          >
+            <img
+              class="w-5 opacity-90"
+              src="assets/img/icon-copy-white.svg"
+              alt="copiar"
+            />
+            Copiar
+          </button>
+        </div>
+
+        <!-- Notificación de copiado -->
+        <div
+          id="notification"
+          class="hidden p-2 mt-14 absolute bg-green-500 text-white rounded-md shadow-lg"
+        >
+          ¡Alias/CVU copiado!
+        </div>
+
+        <!-- ------------------- -->
+
+        <a
+          href="#bloque4"
+          class="animate__animated animate__pulse animate__infinite mt-11 px-4 py-2 rounded transition-all hover:shadow-lg active:scale-100"
+          onclick="scrollAndAnimate(event, 'bloque4')"
+        >
+          <img
+            class="w-12 sombra-2"
+            src="assets/img/icon-chevrondown-blue.svg"
+            alt="chevron-down"
+          />
+        </a>
+      </div>
+      <!-- -------------------------- -->
+
+      <!-- -----------------------------------------Cuarto bloque de contenido -->
+      <div
+        id="bloque4"
+        class="flex flex-col justify-center items-center h-screen text-center"
+      >
+        <div
+          class="flex justify-center items-center rounded-full borde-3 w-7 sm:w-10 h-7 sm:h-10 mb-2"
+        >
+          <img src="assets/img/icon-check-green.svg" alt="" class="w-1/2" />
+        </div>
+        <h2
+          class="not-italic color-5 fuente-3 sombra-2 text-xl sm:text-2xl md:text-2xl lg:size-6"
+        >
+          CONFIRMAR ASISTENCIA
+        </h2>
+        <p class="escalera escalera-1 mt-5 text-center size-10">
+          Por favor, avisar sobre la asistencia al evento.
+        </p>
+
+        <p class="escalera escalera-1 text-center size-10">
+          Agradezco mucho tu confirmación.
+        </p>
+
+        <div class="flex justify-center justify-center space-x-2 mt-8 md:w-2/3">
+          <!-- Campo de alias/CVU no editable -->
+          <div class="w-full mx-auto">
+            <form>
+              <input
+                id="nameInput"
+                type="text"
+                placeholder="Ingresa tu nombre"
+                class="placeholder-custom text-center w-full p-3 mb-4 borde-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button
+                id="sendBtn"
+                class="w-full py-3 btn-2 shadow-xl text-white rounded-full hover:bg-blue-600 transition duration-300 flex flex-row justify-center gap-2"
+              >
+                <img
+                  class="w-5 lg:w-6 opacity-90"
+                  src="assets/img/icon-wsp-white.svg"
+                  alt="15"
+                />
+                <span>Confirmar</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- ------------------- -->
+
+        <p
+          class="escalera escalera-2 mt-12 text-center size-11 color-6 font-medium"
+        >
+          Será un placer que me acompañes.
+        </p>
+        <div class="flex flex-row items-center">
+          <p
+            class="escalera escalera-2 text-center size-11 color-6 font-medium mt-5"
+          >
+            ¡Te espero!
+          </p>
+
+          <button
+            id="animButton"
+            class="flex justify-center items-center w-9 h-9 lg:w-12 lg:h-12 text-white rounded-full btn-nav"
+          >
+            <img
+              class="w-4 lg:w-5 opacity-90"
+              src="assets/img/icon-gift-white.svg"
+              alt="15"
+            />
+          </button>
+        </div>
+      </div>
+      <!-- -------------------------- -->
+    </div>
+    <div id="lottieContainer" class="h-screen w-screen"></div>
+
+    <!-- JS -->
+    <script src="animacion.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.6/lottie.min.js"></script>
+  </body>
+</html>

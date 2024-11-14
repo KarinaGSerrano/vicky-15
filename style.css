@@ -1,0 +1,314 @@
+/* PALETA DE COLORES */
+
+.color-1 {
+  color: #474c57;
+}
+
+.color-2 {
+  color: #474c57;
+}
+
+.color-3 {
+  color: rgb(78, 128, 139);
+}
+
+.color-4 {
+  color: hsl(195, 35%, 65%);
+  filter: drop-shadow(0 3px 4px rgba(255, 244, 227, 0.898));
+}
+
+.color-5 {
+  color: hsl(196, 32%, 57%);
+  filter: drop-shadow(0 3px 4px rgba(255, 244, 227, 0.898));
+}
+
+.color-6 {
+  color: rgb(134, 138, 181);
+  filter: drop-shadow(0 3px 4px rgba(255, 244, 227, 0.898));
+}
+
+/* FUENTES */
+
+.fuente-0 {
+  font-family: 'Bodoni Moda', serif;
+  /* font-optical-sizing: auto;
+  font-weight: 300; */
+  font-style: normal;
+}
+
+.fuente-1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* .fuente-2 {
+  font-family: 'Nunito', sans-serif;
+} */
+
+.fuente-3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.size-1 {
+  font-size: 10rem;
+}
+
+.size-2 {
+  font-size: 2rem;
+}
+
+/* .size-3 {
+  font-size: 3rem;
+} */
+
+.size-3 {
+  font-size: 2rem;
+}
+
+@media (min-width: 640px) {
+  .size-3 {
+    font-size: 3rem;
+  }
+}
+
+.size-4 {
+  font-size: 1.5rem; /* Para escritorio y tabletas */
+}
+
+@media (max-width: 640px) {
+  .size-4 {
+    font-size: 1.2rem; /* Para móviles */
+  }
+}
+
+.size-5 {
+  font-size: 1.1rem;
+}
+
+.size-6 {
+  font-size: 1.8rem; /* Tamaño por defecto para dispositivos grandes */
+}
+
+@media (max-width: 640px) {
+  .size-6 {
+    font-size: 1.4rem; /* Tamaño para dispositivos móviles */
+  }
+}
+
+.size-7 {
+  font-size: 1rem; /* Tamaño predeterminado */
+}
+
+/* Cuando el ancho de la pantalla sea menor a 350px */
+@media (max-width: 350px) {
+  .size-7 {
+    font-size: 0.8rem; /* Tamaño ajustado para pantallas pequeñas */
+  }
+}
+
+.size-8 {
+  font-size: 6.5rem;
+}
+
+@media (min-width: 640px) {
+  .size-8 {
+    font-size: 10rem;
+  }
+}
+
+.size-9 {
+  font-size: 7rem;
+}
+
+.size-10 {
+  font-size: 1.3rem; /* Para escritorio y tabletas */
+}
+
+@media (max-width: 640px) {
+  .size-10 {
+    font-size: 1.1rem; /* Para móviles */
+  }
+}
+
+.size-11 {
+  font-size: 1.2rem; /* Para escritorio y tabletas */
+}
+
+@media (max-width: 640px) {
+  .size-11 {
+    font-size: 1rem; /* Para móviles */
+  }
+}
+
+/* BORDES */
+.borde-1 {
+  border: 3px solid #44899cc3;
+}
+
+.borde-2 {
+  border: 1px solid #aab8e9c3;
+}
+
+.borde-3 {
+  border: 2px solid hsl(195, 35%, 65%);
+}
+
+/* OTROS */
+
+.bg-web {
+  background: #ededed;
+}
+
+.box {
+  background: linear-gradient(
+    180deg,
+    rgb(121, 145, 189) 20%,
+    rgb(150, 189, 201) 89%
+  );
+
+  /* filter: drop-shadow(0px 1px 4px rgba(62, 24, 8, 0.462)); */
+}
+
+/* PLACEHOLDER */
+.placeholder-custom::placeholder {
+  color: #6572a6c3; /* Usa el color que prefieras */
+  opacity: 100; /* Asegura que el color se vea bien */
+}
+
+/* SOMBRAS */
+
+.sombra-1 {
+  filter: drop-shadow(-2px 3px 6px rgba(60, 103, 118, 0.913));
+}
+
+.sombra-2 {
+  filter: drop-shadow(-2px 3px 6px rgba(97, 119, 127, 0.313));
+}
+
+/* BUTTONS */
+.btn-1 {
+  filter: drop-shadow(-4px 1px 3px rgba(25, 2, 2, 0.727));
+}
+
+.btn-nav {
+  background: linear-gradient(
+    180deg,
+    rgb(129, 184, 193) 45%,
+    rgb(105, 146, 155) 95%
+  );
+}
+
+.btn-2 {
+  background: linear-gradient(
+    90deg,
+    rgb(69, 104, 160) 0%,
+    rgb(134, 138, 181) 70%,
+    rgb(117, 184, 201) 100%
+  );
+}
+
+/*  */
+
+@media (min-width: 768px) {
+  .md-h-400 {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg-h-600 {
+    height: 350px;
+  }
+}
+
+/*------------- ANIMACION----------------- */
+
+.animate__fadeInUp {
+  animation-duration: 2s;
+}
+
+/* .animate__animated {
+  animation-duration: 20s;
+} */
+
+.animate__pulse {
+  animation-name: pulse-custom;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes pulse-custom {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(
+      1.2
+    ); /* Ajusta este valor para aumentar o disminuir la expansión */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+/* Clases de animación para fadeInUp */
+.animate__animated {
+  animation-duration: 1s;
+}
+
+/* escalera */
+
+.escalera {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animación para la primera escalera */
+.escalera-1 {
+  transition-delay: 0.5s;
+}
+
+/* Animación para la segunda escalera */
+.escalera-2 {
+  transition-delay: 1s;
+}
+
+.escalera.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate__slideInDown.slow-fade-in-down {
+  animation-duration: 50s;
+}
+
+#lottieContainer {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centra el contenedor */
+  z-index: -1;
+  opacity: 50%;
+}
+
+#animButton {
+  position: relative;
+  z-index: 1;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px; /* Espacio para que el botón se vea */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
