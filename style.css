@@ -27,6 +27,10 @@
   filter: drop-shadow(0 3px 4px rgba(255, 244, 227, 0.898));
 }
 
+.color-7 {
+  background: #474c57;
+}
+
 /* FUENTES */
 
 .fuente-0 {
@@ -306,7 +310,7 @@
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  /* border-radius: 25%; */
   margin-top: 20px; /* Espacio para que el botón se vea */
   display: block;
   margin-left: auto;
