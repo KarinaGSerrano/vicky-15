@@ -105,7 +105,7 @@
 }
 
 .size-7 {
-  font-size: 1rem; /* Tamaño predeterminado */
+  font-size: 1.1rem; /* Tamaño predeterminado */
 }
 
 /* Cuando el ancho de la pantalla sea menor a 350px */
@@ -314,4 +314,44 @@
   border: none;
   cursor: pointer;
   display: block;
+}
+
+/* ---------------Scrollbar----------------- */
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background: #d0cfcf;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(118, 130, 169);
+  border-radius: 7px;
+}
+
+/* SHAKE */
+
+@keyframes customShakeY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateY(-2px); /* Cambia a menos distancia */
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateY(2px); /* Cambia a menos distancia */
+  }
+}
+
+.custom-shake {
+  animation-name: customShakeY; /* Usar la animación personalizada */
+  animation-duration: 1s; /* Duración ajustable */
+  animation-fill-mode: both;
 }

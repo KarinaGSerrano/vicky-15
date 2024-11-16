@@ -63,14 +63,14 @@ function scrollAndAnimate(event, sectionId) {
 const shakeButton = document.getElementById('shakeButton');
 
 setInterval(() => {
-  // Agregar la animación
-  shakeButton.classList.add('animate__shakeY');
+  // Agregar la animación personalizada
+  shakeButton.classList.add('custom-shake');
 
-  // Remover la animación después de 1 segundo (duración de animate__shakeY)
+  // Remover la animación después de 1 segundo (duración de la animación personalizada)
   setTimeout(() => {
-    shakeButton.classList.remove('animate__shakeY');
-  }, 1000); // Ajusta el tiempo si has personalizado la duración de la animación
-}, 8000); // 10000 ms = 10 segundos
+    shakeButton.classList.remove('custom-shake');
+  }, 1000); // Ajusta el tiempo si cambias la duración en CSS
+}, 7000); // 8000 ms = 8 segundos
 
 // COPIADO PORTAPAPELES
 
