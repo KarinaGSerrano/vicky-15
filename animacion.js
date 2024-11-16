@@ -60,9 +60,13 @@ function scrollAndAnimate(event, sectionId) {
 
 // BUTTON SHAKE
 
+// Declarar shakeInterval en el ámbito global (o al menos compartido)
+let shakeInterval;
+
 const shakeButton = document.getElementById('shakeButton');
 
-setInterval(() => {
+// Inicializar el intervalo
+shakeInterval = setInterval(() => {
   // Agregar la animación personalizada
   shakeButton.classList.add('custom-shake');
 
@@ -70,7 +74,15 @@ setInterval(() => {
   setTimeout(() => {
     shakeButton.classList.remove('custom-shake');
   }, 1000); // Ajusta el tiempo si cambias la duración en CSS
-}, 7000); // 8000 ms = 8 segundos
+}, 5000); // 8000 ms = 8 segundos
+
+// Detener la animación al hacer clic
+shakeButton.addEventListener('click', () => {
+  // Detener el intervalo y asegurarse de que no se ejecute más
+  clearInterval(shakeInterval);
+  shakeInterval = null; // Limpia la variable para evitar posibles errores
+  shakeButton.classList.remove('custom-shake'); // Asegura que la clase se quite inmediatamente
+});
 
 // COPIADO PORTAPAPELES
 
@@ -122,7 +134,7 @@ document.getElementById('sendBtn').addEventListener('click', function (event) {
   }
 
   // Número de teléfono de destino (en formato internacional, sin +)
-  const phoneNumber = '5491164944904';
+  const phoneNumber = '5491158011253';
 
   // Mensaje predefinido que incluye el nombre del usuario
   const message = `¡Hola vicky! soy ${name}. Te confirmo que voy a asistir a tu fiesta.`;
