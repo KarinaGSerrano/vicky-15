@@ -74,15 +74,18 @@ shakeInterval = setInterval(() => {
   setTimeout(() => {
     shakeButton.classList.remove('custom-shake');
   }, 1000); // Ajusta el tiempo si cambias la duración en CSS
-}, 5000); // 8000 ms = 8 segundos
+}, 8000); // 8000 ms = 8 segundos
 
-// Detener la animación al hacer clic
-shakeButton.addEventListener('click', () => {
-  // Detener el intervalo y asegurarse de que no se ejecute más
-  clearInterval(shakeInterval);
-  shakeInterval = null; // Limpia la variable para evitar posibles errores
-  shakeButton.classList.remove('custom-shake'); // Asegura que la clase se quite inmediatamente
-});
+// Función para detener la animación
+const stopShake = () => {
+  clearInterval(shakeInterval); // Detener el intervalo
+  shakeInterval = null; // Limpia la referencia
+  shakeButton.classList.remove('custom-shake'); // Asegura que se quite la clase
+};
+
+// Asignar eventos para escritorio y móvil
+shakeButton.addEventListener('click', stopShake);
+shakeButton.addEventListener('touchstart', stopShake); // Para dispositivos móviles
 
 // COPIADO PORTAPAPELES
 
