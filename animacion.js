@@ -61,6 +61,7 @@ function scrollAndAnimate(event, sectionId) {
 // BUTTON SHAKE
 
 // Declarar shakeInterval en el ámbito global (o al menos compartido)
+
 let shakeInterval;
 
 const shakeButton = document.getElementById('shakeButton');
@@ -74,18 +75,17 @@ shakeInterval = setInterval(() => {
   setTimeout(() => {
     shakeButton.classList.remove('custom-shake');
   }, 1000); // Ajusta el tiempo si cambias la duración en CSS
-}, 8000); // 8000 ms = 8 segundos
+}, 6000); // 8000 ms = 8 segundos
 
-// Función para detener la animación
+// Función para detener el shake
 const stopShake = () => {
   clearInterval(shakeInterval); // Detener el intervalo
   shakeInterval = null; // Limpia la referencia
   shakeButton.classList.remove('custom-shake'); // Asegura que se quite la clase
 };
 
-// Asignar eventos para escritorio y móvil
-shakeButton.addEventListener('click', stopShake);
-shakeButton.addEventListener('touchstart', stopShake); // Para dispositivos móviles
+// Usa pointerdown para escritorio y móvil
+shakeButton.addEventListener('pointerdown', stopShake);
 
 // COPIADO PORTAPAPELES
 
