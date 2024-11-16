@@ -129,11 +129,20 @@ function mostrarNotificacion() {
 document.getElementById('sendBtn').addEventListener('click', function (event) {
   event.preventDefault(); // Evita que el enlace se ejecute inmediatamente
 
-  const name = document.getElementById('nameInput').value.trim();
+  const nameInput = document.getElementById('nameInput');
+  const nameError = document.getElementById('nameError');
+  const name = nameInput.value.trim();
 
+  // Verifica si el nombre está vacío
   if (name === '') {
-    alert('Por favor, ingresa un nombre');
+    nameError.classList.remove('opacity-0', 'invisible'); // Muestra el mensaje de error
+    nameError.classList.add('opacity-100', 'visible'); // Hace visible el mensaje
+    nameInput.classList.add('border-red-500'); // Opcional: agrega un borde rojo al input
     return;
+  } else {
+    nameError.classList.remove('opacity-100', 'visible'); // Oculta el mensaje de error
+    nameError.classList.add('opacity-0', 'invisible'); // Lo hace invisible nuevamente
+    nameInput.classList.remove('border-red-500'); // Elimina el borde rojo si lo había
   }
 
   // Número de teléfono de destino (en formato internacional, sin +)
@@ -151,6 +160,18 @@ document.getElementById('sendBtn').addEventListener('click', function (event) {
   console.log(whatsappUrl);
 
   window.open(whatsappUrl, '_blank');
+});
+
+// Detecta cuando el usuario empieza a escribir y oculta el mensaje de error
+document.getElementById('nameInput').addEventListener('input', function () {
+  const nameError = document.getElementById('nameError');
+  const nameInput = document.getElementById('nameInput');
+
+  if (nameInput.value.trim() !== '') {
+    nameError.classList.remove('opacity-100', 'visible'); // Oculta el mensaje de error
+    nameError.classList.add('opacity-0', 'invisible'); // Lo hace invisible nuevamente
+    nameInput.classList.remove('border-red-500'); // Elimina el borde rojo si lo había
+  }
 });
 
 // SCROLL NAV
