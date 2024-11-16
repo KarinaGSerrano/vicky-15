@@ -109,7 +109,7 @@
 }
 
 /* Cuando el ancho de la pantalla sea menor a 350px */
-@media (max-width: 350px) {
+@media (max-width: 380px) {
   .size-7 {
     font-size: 0.8rem; /* Tamaño ajustado para pantallas pequeñas */
   }
