@@ -75,7 +75,7 @@ shakeInterval = setInterval(() => {
   setTimeout(() => {
     shakeButton.classList.remove('custom-shake');
   }, 1000); // Ajusta el tiempo si cambias la duración en CSS
-}, 6000); // 8000 ms = 8 segundos
+}, 4000); // 8000 ms = 8 segundos
 
 // Función para detener el shake
 const stopShake = () => {
